@@ -206,16 +206,16 @@ nav .groups .setting button:hover{
     position: relative;
     overflow: hidden;
 }
-.carousel .box .image_hover img{
+.carousel .box .images_hover img{
     transition: .5s;
     transform: scale(1);
     width: 100%;
 }
-.carousel .box .image_hover:hover .overlay_rud{
+.carousel .box .images_hover:hover .overlay_rud{
     bottom: -60px;
     left: -50px;
 }
-.carousel .box .image_hover:hover img{
+.carousel .box .images_hover:hover img{
     transform: scale(1.1);
     opacity: .7;
 }
@@ -338,7 +338,7 @@ button.owl-next
     background-attachment: fixed;
     background-size: cover;
     position: relative;
-    background-image: url('../image/bk_team.jpg');
+    background-images: url('../images/bk_team.jpg');
 }
 .testimonials::before{
     content: '';

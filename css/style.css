@@ -543,7 +543,7 @@ button.owl-next
 
 @media(max-width: 992px){
     nav .groups .menu {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100vh;

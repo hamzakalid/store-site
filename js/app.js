@@ -1,5 +1,5 @@
 $(function(){
-    $('.loader').fadeOut("500");
+    $('.loader').fadeOut();
     $('.product-owl  .owl-carousel').owlCarousel({
         loop:true,
         margin:10,

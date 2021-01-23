@@ -1,4 +1,5 @@
 $(function(){
+    $('.loader').fadeOut("500");
     $('.product-owl  .owl-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -43,4 +44,11 @@ $(function(){
         easing: 'ease-in-sine',
         dataAosOnce:true
      });
+     $( "#Onavbar" ).click(function( e ) {
+        e.stopPropagation();
+        $(this).removeClass('show');
+
+      }).on('click','a',function(e) {
+        e.stopPropagation();
+   });;
 });

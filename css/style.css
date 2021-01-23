@@ -8,6 +8,7 @@ body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    position: relative;
 }
 .row{
     margin-right: 0px;
@@ -338,7 +339,7 @@ button.owl-next
     background-attachment: fixed;
     background-size: cover;
     position: relative;
-    background-images: url('../images/bk_team.jpg');
+    background-image: url('../images/bk_team.jpg');
 }
 .testimonials::before{
     content: '';
@@ -357,7 +358,6 @@ button.owl-next
 }
 .testimonials .item{
     text-align: center;
-    padding: 0 116px;
 }
 .testimonials .team_img {
     width: 100px;
@@ -376,6 +376,10 @@ button.owl-next
 }
 .testimonials .item .team_content p{
     margin: 3rem !important;
+    max-width: 600px;
+    display: block;
+    margin: 1rem auto !important;
+    padding: 1rem;
 }
 
 
@@ -402,7 +406,7 @@ button.owl-next
 
 /* Start footer */
 .footer-top {
-    background: #002347;
+    background: #eee;
     padding: 50px 0px 50px;
 }
 @media (min-width: 1000px){
@@ -415,11 +419,11 @@ button.owl-next
     font-weight: 500;
     font-family: "Oswald",sans-serif;
     text-transform: capitalize;
-    color: #fff;
+    color: #393939;
     margin-bottom: 28px;
 }
 .footer-top p{
-    color: #7b838a
+    color: #838383;
 }
 .footer-top .footer-gallery .list_gallery{
     margin-left: -5px;
@@ -432,7 +436,7 @@ button.owl-next
 }
 
 .footer-bottom {
-    background: rgba(0,35,71,0.980392);
+    background: rgb(32 32 32 / 98%);
     padding: 32px;
 }
 .footer-bottom p{
@@ -442,6 +446,33 @@ button.owl-next
 }
 .footer-bottom p i{
     color: #235ee7;
+}
+.footer-follow ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    margin: 0;
+}
+
+.footer-follow ul li {
+    margin: 5px;
+    font-size: 25px;
+}
+
+.footer-follow ul li a {
+    color: #6e6e6e;
+}
+.footer-follow ul li a:hover .fa-facebook{
+    color: #235ee7;
+}
+.footer-follow ul li a:hover .fa-twitter{
+    color: #1691f6;
+}
+.footer-follow ul li a:hover .fa-instagram{
+    color: #b516a4;
+}
+.footer-follow ul li a:hover .fa-github{
+    color: #212121;
 }
 /* End Footer */
 
@@ -518,7 +549,7 @@ button.owl-next
         height: 100vh;
         width: 100vw;
         background: #000000cc;
-        z-index: 99999;
+        z-index: 9999;
         color: #eee;
         display: none;
         align-items: center;
@@ -538,4 +569,157 @@ button.owl-next
     nav .groups .menu ul li a {
         color: #eee;
     }
+    ul.lst_N.pages_open {
+        background: #fff0 !important;
+        border: none !important;
+    }
 }
+
+/* Loading page */
+.loader {
+    background: #384aeb;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sk-fading-circle {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  
+  .sk-fading-circle .sk-circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .sk-fading-circle .sk-circle:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 15%;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+    animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+  }
+  .sk-fading-circle .sk-circle2 {
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  .sk-fading-circle .sk-circle3 {
+    -webkit-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  .sk-fading-circle .sk-circle4 {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .sk-fading-circle .sk-circle5 {
+    -webkit-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  .sk-fading-circle .sk-circle6 {
+    -webkit-transform: rotate(150deg);
+        -ms-transform: rotate(150deg);
+            transform: rotate(150deg);
+  }
+  .sk-fading-circle .sk-circle7 {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .sk-fading-circle .sk-circle8 {
+    -webkit-transform: rotate(210deg);
+        -ms-transform: rotate(210deg);
+            transform: rotate(210deg);
+  }
+  .sk-fading-circle .sk-circle9 {
+    -webkit-transform: rotate(240deg);
+        -ms-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  .sk-fading-circle .sk-circle10 {
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  .sk-fading-circle .sk-circle11 {
+    -webkit-transform: rotate(300deg);
+        -ms-transform: rotate(300deg);
+            transform: rotate(300deg); 
+  }
+  .sk-fading-circle .sk-circle12 {
+    -webkit-transform: rotate(330deg);
+        -ms-transform: rotate(330deg);
+            transform: rotate(330deg); 
+  }
+  .sk-fading-circle .sk-circle2:before {
+    -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s; 
+  }
+  .sk-fading-circle .sk-circle3:before {
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; 
+  }
+  .sk-fading-circle .sk-circle4:before {
+    -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s; 
+  }
+  .sk-fading-circle .sk-circle5:before {
+    -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s; 
+  }
+  .sk-fading-circle .sk-circle6:before {
+    -webkit-animation-delay: -0.7s;
+            animation-delay: -0.7s; 
+  }
+  .sk-fading-circle .sk-circle7:before {
+    -webkit-animation-delay: -0.6s;
+            animation-delay: -0.6s; 
+  }
+  .sk-fading-circle .sk-circle8:before {
+    -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s; 
+  }
+  .sk-fading-circle .sk-circle9:before {
+    -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+  }
+  .sk-fading-circle .sk-circle10:before {
+    -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+  }
+  .sk-fading-circle .sk-circle11:before {
+    -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+  }
+  .sk-fading-circle .sk-circle12:before {
+    -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+  }
+  
+  @-webkit-keyframes sk-circleFadeDelay {
+    0%, 39%, 100% { opacity: 0; }
+    40% { opacity: 1; }
+  }
+  
+  @keyframes sk-circleFadeDelay {
+    0%, 39%, 100% { opacity: 0; }
+    40% { opacity: 1; } 
+  }

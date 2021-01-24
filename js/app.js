@@ -1,4 +1,5 @@
-$(function(){
+
+$(document).ready(function(){
     $('.loader').fadeOut();
     $('.product-owl  .owl-carousel').owlCarousel({
         loop:true,

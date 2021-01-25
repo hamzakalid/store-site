@@ -35,6 +35,9 @@ nav .groups .menu ul{
 nav .groups .menu ul li{
     margin: 0 10px;
 }
+nav .groups .menu ul li a.active{
+    color: #0181f6;
+}
 nav .groups .menu ul li a{
     text-decoration: none;
     color: #555;
@@ -91,6 +94,7 @@ nav .groups .setting button:hover{
     background-color: #3a4aec;
     color: #eee
 }
+
 
 /* End Nav */
 
@@ -447,35 +451,52 @@ button.owl-next
 .footer-bottom p i{
     color: #235ee7;
 }
-.footer-follow ul {
+.footer-follow ul.sm {
     list-style: none;
     display: flex;
     text-align: center;
     margin: 0;
 }
 
-.footer-follow ul li {
+.footer-follow ul.sm li {
     margin: 5px;
     font-size: 25px;
 }
 
-.footer-follow ul li a {
+.footer-follow ul.sm li a {
     color: #6e6e6e;
 }
-.footer-follow ul li a:hover .fa-facebook{
+.footer-follow ul.sm li a:hover .fa-facebook{
     color: #235ee7;
 }
-.footer-follow ul li a:hover .fa-twitter{
+.footer-follow ul.sm li a:hover .fa-twitter{
     color: #1691f6;
 }
-.footer-follow ul li a:hover .fa-instagram{
+.footer-follow ul.sm li a:hover .fa-instagram{
     color: #b516a4;
 }
-.footer-follow ul li a:hover .fa-github{
+.footer-follow ul.sm li a:hover .fa-github{
     color: #212121;
 }
-/* End Footer */
+.footer-follow ul.theme-btns li{
+    width: 30px;
+    height: 30px;
+    background-color: #0181f6;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.footer-follow ul.theme-btns li:first-of-type{
+    background-color: #0181f6;
+}
 
+.footer-follow ul.theme-btns li:nth-of-type(2){
+    background-color: #E91E63 ;
+}
+.footer-follow ul.theme-btns li:last-of-type{
+    background-color: #009688;
+}
 /* Start FrameWork */
 .lst_N{
     list-style: none;
@@ -699,7 +720,86 @@ button.owl-next
   }
   .sk-fading-circle .sk-circle9:before {
     -webkit-animation-delay: -0.4s;
-            animation-delay: -0.4s;
+            animation-del
+            $(document).ready(function(){
+                $('.loader').fadeOut();
+                $('.product-owl  .owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:10,
+                    nav:true,
+                    autoplay:true,
+                    // responsiveClass:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                            // nav:true
+                        },
+                        600:{
+                            items:3,
+                            // nav:false
+                        },
+                        1000:{
+                            items:5,
+                            // nav:true,
+                            // loop:false
+                        }
+                    }
+                 });
+                 
+            
+                 $('.testimonials .owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:10,
+                    nav:true,
+                    autoplay:true,
+                    items:1
+                });
+            
+            
+                 $('.menu-icon').on('click',function(){
+                    $('.menu').toggleClass('show');
+                 });
+            
+                 //Mixup start
+                 
+                 AOS.init({
+                    duration: 600,
+                    easing: 'ease-in-sine',
+                    dataAosOnce:true
+                 });
+                 $( "#Onavbar" ).click(function( e ) {
+                    e.stopPropagation();
+                    $(this).removeClass('show');
+            
+                  }).on('click','a',function(e) {
+                    e.stopPropagation();
+               });
+               //when you click on the menu item
+               $('nav .groups .menu ul li a').on('click',function(){
+                   $(this).addClass('active').parent().siblings().children().removeClass('active')
+               })
+            
+               //Start with scroll top action
+               $(window).scroll(function () { 
+                   var winSrollTop =$(this).scrollTop();
+                   $('section').each(function(){
+                        if(winSrollTop >= $(this).offset().top - 80){
+                            // console.log();
+                            $('nav .groups .menu ul li a[href=#'+$(this).attr('id')+']').addClass('active').parent().siblings().children().removeClass('active')
+                        }
+                   });
+               });
+            
+               $('.theme-btns li').on('click', function () {
+                   if($(this).data('color')!= 'blue'){
+                        var colorName ="css/style."+$(this).data('color')+".color.css";
+                        $('.theme').attr('href', colorName);
+                   }else{
+                       $('.theme').removeAttr('href');
+                   }
+               });
+            });
+            ay: -0.4s;
   }
   .sk-fading-circle .sk-circle10:before {
     -webkit-animation-delay: -0.3s;
